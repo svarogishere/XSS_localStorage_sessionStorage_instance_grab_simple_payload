@@ -1,0 +1,1 @@
+# XSS_localStorage_sessionStorage_instance_grab_simple_payload
